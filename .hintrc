@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": "off",
+    "css-prefix-order": "off",
+    "disown-opener": "off",
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off"
+      }
+    ],
+    "no-inline-styles": "off",
+    "axe/forms": [
+      "default",
+      {
+        "select-name": "off"
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 147",
+    "not firefox <= 147",
+    "not ios_saf <= 26.2",
+    "not safari <= 26.2"
+  ]
+}
