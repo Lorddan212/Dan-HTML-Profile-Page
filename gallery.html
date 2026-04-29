@@ -1,288 +1,252 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gallery — Daniel Odion Jegbefumhen</title>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Daniel Odion Jegbefumhen</title>
+  <meta name="description" content="Gallery page for Daniel Odion Jegbefumhen covering website visuals, electrical work categories, and print presentation samples.">
   <link rel="icon" type="image/png" href="assets/img/Link Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <div class="fx-bg" aria-hidden="true">
-    <div class="fx-grid"></div>
-    <div class="fx-orbs">
-      <span class="orb orb-a"></span>
-      <span class="orb orb-b"></span>
-      <span class="orb orb-c"></span>
-      <span class="orb orb-d"></span>
-    </div>
-    <canvas id="fxCanvas"></canvas>
+  <div class="site-bg" aria-hidden="true">
+    <span class="bg-blur blur-a"></span>
+    <span class="bg-blur blur-b"></span>
+    <span class="bg-grid"></span>
   </div>
 
-  <div id="scrollProgress" class="scroll-progress"></div>
-
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-glass">
+  <nav class="navbar navbar-expand-lg site-nav sticky-top">
     <div class="container">
-      <a class="navbar-brand brand" href="index.html">
-        <img class="brand-icon" src="assets/img/Link Logo.png" alt="" aria-hidden="true">
-        <span class="fw-semibold">Daniel Jegbe</span>
-        <span class="brand-sub">Portfolio</span>
+      <a class="navbar-brand brand-mark" href="index.html">
+        <img src="assets/img/Link Logo.png" alt="Daniel Jegbe logo">
+        <span>
+          <strong>Daniel Jegbe</strong>
+          <small>Portfolio</small>
+        </span>
       </a>
 
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div id="nav" class="collapse navbar-collapse">
+      <div class="collapse navbar-collapse" id="siteNav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item">
-            <a class="nav-link" href="about.html"><i class="bi bi-person-circle me-1"></i>About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#tracks"><i class="bi bi-diagram-3 me-1"></i>My Tracks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#work"><i class="bi bi-grid-3x3-gap me-1"></i>Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#contact"><i class="bi bi-chat-dots me-1"></i>Contact</a>
-          </li>
-
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item ms-lg-2">
-            <button id="themeToggle" class="btn btn-ghost btn-sm px-3" type="button" aria-label="Toggle theme">
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">
               <i class="bi bi-moon-stars"></i>
+              <span>Theme</span>
             </button>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-brand" href="contact.html">Book a Project</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- FULL-WIDTH CAROUSEL immediately after nav -->
-  <section class="full-banner">
-    <div id="galleryCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3500">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1800&q=70" alt="Web">
-        </div>
-        <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1800&q=70" alt="Electrical">
-        </div>
-        <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&w=1800&q=70" alt="Print">
+  <main>
+    <header class="inner-hero section-pad">
+      <div class="container">
+        <div class="section-heading narrow text-start" data-reveal>
+          <span class="eyebrow">Gallery</span>
+          <h1 class="section-title large-title">Visual proof of the brand direction behind the work.</h1>
+          <p class="section-copy">
+            This gallery groups visuals into the three main service areas. Some items are real brand/profile visuals from the project
+            and some are carefully chosen service references that show the kind of work these categories represent.
+          </p>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
+    </header>
+
+    <section class="section-pad">
+      <div class="container">
+        <div class="filter-bar" data-reveal>
+          <button class="filter-chip active" type="button" data-filter="all">All</button>
+          <button class="filter-chip" type="button" data-filter="web">Web</button>
+          <button class="filter-chip" type="button" data-filter="electrical">Electrical</button>
+          <button class="filter-chip" type="button" data-filter="print">Print</button>
+        </div>
+
+        <div class="row g-4 gallery-grid mt-1">
+          <div class="col-sm-6 col-lg-4 gallery-item" data-category="web">
+            <article class="gallery-card" data-reveal data-image="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1400&q=80" data-caption="Website interface sample showing clean layout, strong spacing, and a modern frontend presentation.">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80" alt="Website interface sample">
+              <div class="gallery-card-copy">
+                <span class="tag-pill">Web</span>
+                <h3>Responsive business interface</h3>
+                <p>A sample of the kind of clean and conversion-friendly interface used for service-focused websites.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 gallery-item" data-category="web">
+            <article class="gallery-card" data-reveal data-image="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1400&q=80" data-caption="Landing page sample suited for promotions, product launches, and direct response campaigns.">
+              <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80" alt="Landing page sample">
+              <div class="gallery-card-copy">
+                <span class="tag-pill">Web</span>
+                <h3>Landing page presentation</h3>
+                <p>Focused layout ideas for campaigns, product pages, and targeted service offers.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 gallery-item" data-category="web">
+            <article class="gallery-card" data-reveal data-image="assets/img/Dan Web_HD.png" data-caption="Daniel Jegbe web profile visual used for personal brand presentation.">
+              <img src="assets/img/Dan Web_HD.png" alt="Daniel Jegbe web profile visual">
+              <div class="gallery-card-copy">
+                <span class="tag-pill">Web</span>
+                <h3>Personal brand visual</h3>
+                <p>A direct visual asset from the project representing the web development side of the portfolio.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 gallery-item" data-category="electrical">
+            <article class="gallery-card" data-reveal data-image="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1400&q=80" data-caption="Electrical installation reference representing structured power setup and organized wiring work.">
+              <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=900&q=80" alt="Electrical installation reference">
+              <div class="gallery-card-copy">
+                <span class="tag-pill">Electrical</span>
+                <h3>Installation and power setup</h3>
+                <p>Reference imagery for electrical installation, distribution planning, and dependable power support.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 gallery-item" data-category="electrical">
+            <article class="gallery-card" data-reveal data-image="https://images.unsplash.com/photo-1581092588429-4c60f1db0f6d?auto=format&fit=crop&w=1400&q=80" data-caption="Electrical maintenance reference showing the tools and hands-on service side of repair and support work.">
+              <img src="https://images.unsplash.com/photo-1581092588429-4c60f1db0f6d?auto=format&fit=crop&w=900&q=80" alt="Electrical maintenance reference">
+              <div class="gallery-card-copy">
+                <span class="tag-pill">Electrical</span>
+                <h3>Maintenance and troubleshooting</h3>
+                <p>Support visuals for inspections, correction work, and everyday electrical problem-solving.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 gallery-item" data-category="electrical">
+            <article class="gallery-card" data-reveal data-image="assets/img/Dan Elect_HD.png" data-caption="Daniel Jegbe electrical profile visual representing the electrical services identity in the portfolio.">
+              <img src="assets/img/Dan Elect_HD.png" alt="Daniel Jegbe electrical profile visual">
+              <div class="gallery-card-copy">
+                <span class="tag-pill">Electrical</span>
+                <h3>Electrical identity visual</h3>
+                <p>A project image that supports the personal branding of the electrical service track.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 gallery-item" data-category="print">
+            <article class="gallery-card" data-reveal data-image="https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&w=1400&q=80" data-caption="Print design reference representing clean promotional materials and presentation-ready layouts.">
+              <img src="https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&w=900&q=80" alt="Print design reference">
+              <div class="gallery-card-copy">
+                <span class="tag-pill">Print</span>
+                <h3>Promotional print design</h3>
+                <p>Visual reference for flyers, posters, and branded materials used for visibility and promotion.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 gallery-item" data-category="print">
+            <article class="gallery-card" data-reveal data-image="https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=1400&q=80" data-caption="Branding print reference suitable for packaged business materials and presentation assets.">
+              <img src="https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=900&q=80" alt="Branding print reference">
+              <div class="gallery-card-copy">
+                <span class="tag-pill">Print</span>
+                <h3>Business branding materials</h3>
+                <p>Reference visuals for cards, office prints, event items, and polished brand communication.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 gallery-item" data-category="print">
+            <article class="gallery-card" data-reveal data-image="assets/img/Dan_HD.png" data-caption="Main Daniel Jegbe profile visual used as part of the broader portfolio brand presence.">
+              <img src="assets/img/Dan_HD.png" alt="Daniel Jegbe profile visual">
+              <div class="gallery-card-copy">
+                <span class="tag-pill">Print</span>
+                <h3>General portfolio brand image</h3>
+                <p>A project visual that helps tie the broader multi-service brand together across pages.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad section-shell">
+      <div class="container">
+        <div class="cta-panel" data-reveal>
+          <div>
+            <span class="eyebrow">Move Forward</span>
+            <h2 class="section-title">Need service details or want to reach out directly?</h2>
+            <p class="section-copy mb-0">You can jump to the dedicated services page for the full breakdown or go straight to the contact page to start the conversation.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-brand" href="services.html">View Services</a>
+            <a class="btn btn-outline-brand" href="contact.html">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand-mark footer-brand" href="index.html">
+          <img src="assets/img/Link Logo.png" alt="Daniel Jegbe logo">
+          <span>
+            <strong>Daniel Jegbe</strong>
+            <small>Portfolio</small>
+          </span>
+        </a>
+        <p class="footer-copy">Frontend web development, electrical support, and print services delivered with clarity and care.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:jegbefumhendaniel@gmail.com">jegbefumhendaniel@gmail.com</a></li>
+          <li><a href="tel:+2348109368514">+2348109368514</a></li>
+          <li><a href="#" data-whatsapp-link>WhatsApp chat</a></li>
+        </ul>
+      </div>
     </div>
-  </section>
 
-  <header class="section hero hero-sm">
-    <div class="container">
-      <div class="chip mb-3 reveal"><i class="bi bi-images"></i><span>Gallery</span></div>
-      <h1 class="display-6 fw-bold reveal">Samples & Visual Proof</h1>
-      <p class="lead text-readable reveal mt-3" style="font-weight: 600">
-        Use these for now. Replace later with your real web screenshots, electrical job photos, and print samples.
-      </p>
-
-      <div class="filter-row reveal mt-4">
-        <button class="btn filter-btn filter-all active" data-filter="all">
-          <i class="bi bi-grid-3x3-gap"></i> All Projects
-        </button>
-        <button class="btn filter-btn filter-web" data-filter="web">
-          <i class="bi bi-code-slash"></i> Web Development
-        </button>
-        <button class="btn filter-btn filter-elec" data-filter="electrical">
-          <i class="bi bi-lightning-charge"></i> Electrical
-        </button>
-        <button class="btn filter-btn filter-print" data-filter="print">
-          <i class="bi bi-printer"></i> Printing
-        </button>
-        <span id="filterPill" class="filter-pill" aria-hidden="true"></span>
-      </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year></span> Daniel Odion Jegbefumhen. All rights reserved.</p>
     </div>
-  </header>
+  </footer>
 
-  <section class="section pt-0">
-    <div class="container">
-      <div id="galleryStage" class="gallery-stage">
-        <div class="row g-3" id="galleryGrid">
-
-          <!-- WEB base -->
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="web">
-            <div class="gallery-tile2 gal-web">
-              <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=70" alt="Web sample">
-              <div class="gallery-cap"><i class="bi bi-code-slash"></i> Web UI</div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="web">
-            <div class="gallery-tile2 gal-web">
-              <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=70" alt="Web sample">
-              <div class="gallery-cap"><i class="bi bi-code-slash"></i> Landing Page</div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="web">
-            <div class="gallery-tile2 gal-web">
-              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=70" alt="Web sample">
-              <div class="gallery-cap"><i class="bi bi-code-slash"></i> Dev Work</div>
-            </div>
-          </div>
-
-          <!-- WEB extras (+7) -->
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="web"><div class="gallery-tile2 gal-web"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=70" alt="Web sample"><div class="gallery-cap"><i class="bi bi-code-slash"></i> UI Layout</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="web"><div class="gallery-tile2 gal-web"><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=70" alt="Web sample"><div class="gallery-cap"><i class="bi bi-code-slash"></i> Components</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="web"><div class="gallery-tile2 gal-web"><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=70" alt="Web sample"><div class="gallery-cap"><i class="bi bi-code-slash"></i> Dashboard</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="web"><div class="gallery-tile2 gal-web"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1200&q=70" alt="Web sample"><div class="gallery-cap"><i class="bi bi-code-slash"></i> UI Kit</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="web"><div class="gallery-tile2 gal-web"><img src="https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=1200&q=70" alt="Web sample"><div class="gallery-cap"><i class="bi bi-code-slash"></i> Landing</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="web"><div class="gallery-tile2 gal-web"><img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1200&q=70" alt="Web sample"><div class="gallery-cap"><i class="bi bi-code-slash"></i> Mobile UI</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="web"><div class="gallery-tile2 gal-web"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=70" alt="Web sample"><div class="gallery-cap"><i class="bi bi-code-slash"></i> Dev Screen</div></div></div>
-
-          <!-- ELECTRICAL base -->
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="electrical">
-            <div class="gallery-tile2 gal-elec">
-              <img src="https://images.unsplash.com/photo-1581092795360-7a24f1f5d9f0?auto=format&fit=crop&w=1200&q=70" alt="Electrical sample">
-              <div class="gallery-cap"><i class="bi bi-lightning-charge"></i> Installation</div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="electrical">
-            <div class="gallery-tile2 gal-elec">
-              <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=70" alt="Electrical sample">
-              <div class="gallery-cap"><i class="bi bi-lightning-charge"></i> Power Setup</div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="electrical">
-            <div class="gallery-tile2 gal-elec">
-              <img src="https://images.unsplash.com/photo-1581092334648-77f4aa7d1894?auto=format&fit=crop&w=1200&q=70" alt="Electrical sample">
-              <div class="gallery-cap"><i class="bi bi-lightning-charge"></i> Maintenance</div>
-            </div>
-          </div>
-
-          <!-- ELECTRICAL extras (+7) -->
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="electrical"><div class="gallery-tile2 gal-elec"><img src="https://images.unsplash.com/photo-1581091215367-59ab6b0b9679?auto=format&fit=crop&w=1200&q=70" alt="Electrical sample"><div class="gallery-cap"><i class="bi bi-lightning-charge"></i> Wiring</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="electrical"><div class="gallery-tile2 gal-elec"><img src="https://images.unsplash.com/photo-1581092588429-4c60f1db0f6d?auto=format&fit=crop&w=1200&q=70" alt="Electrical sample"><div class="gallery-cap"><i class="bi bi-lightning-charge"></i> Tools</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="electrical"><div class="gallery-tile2 gal-elec"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=70" alt="Electrical sample"><div class="gallery-cap"><i class="bi bi-lightning-charge"></i> Panel</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="electrical"><div class="gallery-tile2 gal-elec"><img src="https://images.unsplash.com/photo-1581092919535-7146c6b2a24a?auto=format&fit=crop&w=1200&q=70" alt="Electrical sample"><div class="gallery-cap"><i class="bi bi-lightning-charge"></i> Repair</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="electrical"><div class="gallery-tile2 gal-elec"><img src="https://images.unsplash.com/photo-1581093458791-9d15482778d0?auto=format&fit=crop&w=1200&q=70" alt="Electrical sample"><div class="gallery-cap"><i class="bi bi-lightning-charge"></i> Safety</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="electrical"><div class="gallery-tile2 gal-elec"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=70" alt="Electrical sample"><div class="gallery-cap"><i class="bi bi-lightning-charge"></i> Installation</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="electrical"><div class="gallery-tile2 gal-elec"><img src="https://images.unsplash.com/photo-1581092160607-ee67d9f08ff2?auto=format&fit=crop&w=1200&q=70" alt="Electrical sample"><div class="gallery-cap"><i class="bi bi-lightning-charge"></i> Checks</div></div></div>
-
-          <!-- PRINT base -->
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="print">
-            <div class="gallery-tile2 gal-print">
-              <img src="https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&w=1200&q=70" alt="Print sample">
-              <div class="gallery-cap"><i class="bi bi-printer"></i> Print Design</div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="print">
-            <div class="gallery-tile2 gal-print">
-              <img src="https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=1200&q=70" alt="Print sample">
-              <div class="gallery-cap"><i class="bi bi-printer"></i> Branding</div>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="print">
-            <div class="gallery-tile2 gal-print">
-              <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=70" alt="Print sample">
-              <div class="gallery-cap"><i class="bi bi-printer"></i> Materials</div>
-            </div>
-          </div>
-
-          <!-- PRINT extras (+7) -->
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="print"><div class="gallery-tile2 gal-print"><img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1200&q=70" alt="Print sample"><div class="gallery-cap"><i class="bi bi-printer"></i> Flyers</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="print"><div class="gallery-tile2 gal-print"><img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=70" alt="Print sample"><div class="gallery-cap"><i class="bi bi-printer"></i> Posters</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="print"><div class="gallery-tile2 gal-print"><img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=70" alt="Print sample"><div class="gallery-cap"><i class="bi bi-printer"></i> Booklets</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="print"><div class="gallery-tile2 gal-print"><img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=70" alt="Print sample"><div class="gallery-cap"><i class="bi bi-printer"></i> Branding</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="print"><div class="gallery-tile2 gal-print"><img src="https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=1200&q=70" alt="Print sample"><div class="gallery-cap"><i class="bi bi-printer"></i> Design</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="print"><div class="gallery-tile2 gal-print"><img src="https://images.unsplash.com/photo-1587614382346-4ec70e0f929b?auto=format&fit=crop&w=1200&q=70" alt="Print sample"><div class="gallery-cap"><i class="bi bi-printer"></i> Stickers</div></div></div>
-          <div class="col-6 col-lg-3 gallery-item reveal" data-cat="print"><div class="gallery-tile2 gal-print"><img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6d?auto=format&fit=crop&w=1200&q=70" alt="Print sample"><div class="gallery-cap"><i class="bi bi-printer"></i> Cards</div></div></div>
-
-        </div>
-      </div>
-
-      <div class="text-center mt-5">
-        <a class="btn btn-neon px-4" href="index.html#contact"><i class="bi bi-whatsapp"></i> Contact / Order</a>
-        <a class="btn btn-ghost px-4 ms-2" href="index.html"><i class="bi bi-house"></i> Back Home</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Image Modal -->
-  <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content modal-glass">
-        <div class="modal-header modal-glass-head">
-          <h5 class="modal-title" id="imgModalCap">Preview</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-0">
-          <img id="imgModalSrc" src="" alt="Preview" class="modal-img">
-        </div>
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content gallery-modal-shell">
+        <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <img id="galleryModalImage" src="" alt="">
+        <p id="galleryModalCaption"></p>
       </div>
     </div>
   </div>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <div class="footer-motto">
-            <i class="bi bi-gem"></i>
-            <span>We Build It, Power It, And Bring It to Life With Innovation in Web, Precision in Power, Quality in Printing.</span>
-          <i class="bi bi-gem"></i>
-          </div>
-          <div class="text-dim small">
-            Premium service delivery across Web Developments, Electrical Works, and General Printing Solutions  —  Built For Quality And Trust.
-          </div>
-          <div class="footer-social">
-            <a class="social-btn sm" href="https://www.linkedin.com/in/daniel-jegbefumhen-944aa9156/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a class="social-btn sm" href="https://github.com/Lorddan212" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
-            <a class="social-btn sm" href="https://x.com/lorddan212" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-            <a class="social-btn sm" href="https://www.tiktok.com/@lorddan212?lang=en" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-            <a class="social-btn sm" href="https://www.youtube.com/@Lorddan212" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-            <a class="social-btn sm" href="https://web.facebook.com/Lorddan212" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          </div>
-        </div>
-
-        <div class="footer-links">
-          <div class="fw-bold mb-2">Quick Links</div>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="index.html#tracks">My Tracks</a>
-          <a href="index.html#work">Portfolio</a>
-          <a href="index.html#contact">Contact</a>
-        </div>
-
-        <div class="footer-links">
-          <div class="fw-bold mb-2">Contact</div>
-          <a href="mailto:jegbefumhendaniel@gmail.com"><i class="bi bi-envelope-at me-2"></i> Email</a>
-          <a href="tel:+2348109368514"><i class="bi bi-telephone me-2"></i> Phone</a>
-          <a href="https://wa.me/2348109368514?text=Hi%20Daniel%2C%20I%20saw%20your%20portfolio%20and%20I%20want%20to%20discuss%20a%20project%2Fservice." target="_blank">
-            <i class="bi bi-whatsapp me-2"></i> WhatsApp
-          </a>
-          <a href="https://www.google.com/maps/search/?api=1&query=Plot%20346%20Plase%201%20Lugbe%20Airport%20Road%20FCT%20Abuja%20Nigeria" target="_blank">
-            <i class="bi bi-geo-alt me-2"></i> Plot 346 Plase 1 Lugbe, Abuja
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>© <span id="year"></span> Daniel Odion Jegbefumhen. All rights reserved.</div>
-        <div class="text-dim">From Pixels to Power to Print — Premium Solutions, End-to-End.</div>
-      </div>
-    </div>
-  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>

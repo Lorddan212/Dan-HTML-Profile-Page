@@ -1,49 +1,44 @@
 # Daniel HTML Profile Page
 
-A responsive multi-page personal portfolio website for **Daniel Odion Jegbefumhen**, presenting his work and services across three areas:
+A responsive multi-page portfolio website for **Daniel Odion Jegbefumhen**, built to present his work and services across:
 
 - Frontend web development
-- Electrical engineering/services
-- General printing services
+- Electrical services
+- General printing
 
-This project is built as a **static website** using HTML, CSS, JavaScript, and Bootstrap, with custom animations, theme switching, gallery filtering, and contact actions.
+The project is a static website built with HTML, CSS, JavaScript, and Bootstrap, with a bright custom color system, dark mode support, gallery filtering, and direct contact actions.
 
 ## Overview
 
-The site is designed as a premium-style personal brand and portfolio experience. It includes:
-
-- A landing page with hero section, service tracks, portfolio previews, and contact section
-- A dedicated about page with detailed service descriptions
-- A gallery page with category-based filtering and image modal viewing
-- Interactive UI features such as scroll reveal, tilt cards, animated backgrounds, theme toggle, and WhatsApp/contact shortcuts
+The website presents Daniel as a multi-service professional with a clear client journey. It now includes dedicated pages for service details and contact, instead of keeping everything on the home page.
 
 ## Pages
 
-- `index.html` - Main landing page with hero, tracks, portfolio, and contact section
-- `about.html` - Detailed introduction and breakdown of services
-- `gallery.html` - Gallery page with filters for web, electrical, and printing samples
+- `index.html` - Home page with hero section, service snapshot, featured focus, process, and call to action
+- `about.html` - Background, work style, strengths, and profile overview
+- `services.html` - Full service breakdown for web development, electrical services, and printing
+- `gallery.html` - Filterable gallery with modal image preview
+- `contact.html` - Full contact details, inquiry form, and response guide
 
 ## Features
 
 - Responsive layout built with Bootstrap 5
-- Dark/light theme toggle saved with `localStorage`
-- Animated hero section and background effects
-- Typed name animation
-- Rotating profile images
-- Scroll progress indicator
-- Reveal-on-scroll effects
-- Tilt card interaction
-- Portfolio and service showcase sections
-- WhatsApp quick contact link
-- Contact form that opens the user's email client via `mailto:`
-- Copy-email utility button
-- Filterable gallery with modal image preview
+- Dark and light theme toggle saved with `localStorage`
+- Brighter visual palette using electric blue, lemon green, purple, pink, and burnt orange
+- Improved dark-mode text visibility across cards, forms, and content sections
+- Hero image rotation on the home page using:
+  `Dan_HD.png`, `Dan Elect_HD.png`, and `Dan Web_HD.png`
+- Reveal-on-scroll animations
+- WhatsApp quick links across pages
+- Contact form that opens the user's default email app with a prepared message
+- Copy-email button
+- Filterable gallery with image modal preview
 
 ## Tech Stack
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla JS)
+- JavaScript
 - [Bootstrap 5.3.3](https://getbootstrap.com/)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 
@@ -53,8 +48,11 @@ The site is designed as a premium-style personal brand and portfolio experience.
 Dan HTML Profile Page/
 |-- index.html
 |-- about.html
+|-- services.html
 |-- gallery.html
+|-- contact.html
 |-- README.md
+|-- LICENSE
 |-- css/
 |   `-- style.css
 |-- js/
@@ -69,34 +67,33 @@ Dan HTML Profile Page/
 
 ## Getting Started
 
-Because this is a static website, no build step is required.
+No build step is required.
 
 1. Clone or download the project.
-2. Open `index.html` directly in your browser, or
-3. Run it with a local server such as the VS Code Live Server extension for a smoother development experience.
+2. Open `index.html` in your browser.
+3. For easier development, run the project with a local server such as VS Code Live Server.
 
 ## Customization
 
-Most editable profile data is stored in [`js/script.js`](./js/script.js) inside the `PROFILE` object:
+Most editable profile data is stored in [`js/script.js`](./js/script.js) inside the `PROFILE` object, including:
 
-- Name
-- Email
+- Email address
 - Phone number
 - WhatsApp number
 - Default WhatsApp message
-- Rotating profile images
+- Rotating home-page profile images
 
 You can also customize:
 
-- Site colors and visual styling in [`css/style.css`](./css/style.css)
-- Page content and sections in `index.html`, `about.html`, and `gallery.html`
-- Gallery placeholder images and portfolio sample links
+- Shared styles and colors in [`css/style.css`](./css/style.css)
+- Page content in `index.html`, `about.html`, `services.html`, `gallery.html`, and `contact.html`
+- Gallery images and captions
 
 ## Notes
 
-- Some gallery and portfolio images currently use external placeholder/sample images from Unsplash.
-- Some portfolio buttons still point to placeholder `#` links and should be replaced with real project URLs if needed.
-- The contact form does not submit to a backend server. It opens the user's default mail app using a `mailto:` link.
+- The contact form does not use a backend. It prepares a `mailto:` message in the user's email app.
+- Some gallery visuals still use external reference/sample images from Unsplash.
+- The home-page display image now alternates automatically between the three Daniel profile images.
 
 ## Author
 

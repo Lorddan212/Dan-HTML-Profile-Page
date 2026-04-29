@@ -1,293 +1,345 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — Daniel Odion Jegbefumhen</title>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Daniel Odion Jegbefumhen</title>
+  <meta name="description" content="Learn more about Daniel Odion Jegbefumhen, his work approach, and the services he offers across web, electrical, and printing.">
   <link rel="icon" type="image/png" href="assets/img/Link Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body style="background:#800080;">
-  <div class="fx-bg" aria-hidden="true">
-    <div class="fx-grid"></div>
-    <div class="fx-orbs">
-      <span class="orb orb-a"></span>
-      <span class="orb orb-b"></span>
-      <span class="orb orb-c"></span>
-      <span class="orb orb-d"></span>
-    </div>
-    <canvas id="fxCanvas"></canvas>
+<body>
+  <div class="site-bg" aria-hidden="true">
+    <span class="bg-blur blur-a"></span>
+    <span class="bg-blur blur-b"></span>
+    <span class="bg-grid"></span>
   </div>
 
-  <div id="scrollProgress" class="scroll-progress"></div>
-
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-glass">
+  <nav class="navbar navbar-expand-lg site-nav sticky-top">
     <div class="container">
-      <a class="navbar-brand brand" href="index.html">
-        <img class="brand-icon" src="assets/img/Link Logo.png" alt="" aria-hidden="true">
-        <span class="fw-semibold">Daniel Jegbe</span>
-        <span class="brand-sub">Portfolio</span>
+      <a class="navbar-brand brand-mark" href="index.html">
+        <img src="assets/img/Link Logo.png" alt="Daniel Jegbe logo">
+        <span>
+          <strong>Daniel Jegbe</strong>
+          <small>Portfolio</small>
+        </span>
       </a>
 
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div id="nav" class="collapse navbar-collapse">
+      <div class="collapse navbar-collapse" id="siteNav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item">
-            <a class="nav-link" href="about.html"><i class="bi bi-person-circle me-1"></i>About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#tracks"><i class="bi bi-diagram-3 me-1"></i>My Tracks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#work"><i class="bi bi-grid-3x3-gap me-1"></i>Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html#contact"><i class="bi bi-chat-dots me-1"></i>Contact</a>
-          </li>
-
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item ms-lg-2">
-            <button id="themeToggle" class="btn btn-ghost btn-sm px-3" type="button" aria-label="Toggle theme">
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">
               <i class="bi bi-moon-stars"></i>
+              <span>Theme</span>
             </button>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-brand" href="contact.html">Book a Project</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- FULL-WIDTH CAROUSEL (immediately after nav) -->
-  <section class="full-banner">
-    <div id="aboutCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3500">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1800&q=70" alt="Web">
-        </div>
-        <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1800&q=70" alt="Electrical">
-        </div>
-        <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&w=1800&q=70" alt="Print">
+  <main>
+    <header class="inner-hero section-pad">
+      <div class="container">
+        <div class="section-heading narrow text-start" data-reveal>
+          <span class="eyebrow">About Daniel</span>
+          <h1 class="section-title large-title">Built around service, clarity, and work that should feel worth paying for.</h1>
+          <p class="section-copy">
+            This portfolio represents more than a list of skills. It presents a working profile built around helping people look more professional,
+            fix practical needs, and communicate more effectively through digital, technical, and print solutions.
+          </p>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-  </section>
+    </header>
 
-  <!-- CONTENT -->
-  <header class="section hero hero-sm">
-    <div class="container">
-      <div class="chip mb-3 reveal"><i class="bi bi-person-badge"></i><span>About Daniel Jegbe</span></div>
-      <h1 class="display-6 fw-bold reveal">Elegant. Reliable. Premium Delivery.</h1>
-      <p class="lead text-readable reveal mt-3" style="font-weight: 600">
-        I’m Daniel Odion Jegbefumhen — a multi-skilled professional combining technology, engineering, and creative production.
-        I build modern frontend interfaces, execute safe electrical solutions, and deliver premium printing that elevates brands and events.
-      </p>
+    <section class="section-pad">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <div class="image-panel" data-reveal>
+              <img src="assets/img/Dan_HD.png" alt="Daniel Odion Jegbefumhen portrait">
+            </div>
+          </div>
 
-      <div class="motto reveal mt-3">
-        <i class="bi bi-gem"></i>
-        <span>We Build It, Power It, And Bring It to Life With Innovation in Web, Precision in Power, Quality in Printing.</span>
-          <i class="bi bi-gem"></i>
+          <div class="col-lg-7">
+            <div class="section-heading text-start narrow mb-0" data-reveal>
+              <span class="eyebrow">Profile Summary</span>
+              <h2 class="section-title">A multi-skilled professional serving everyday business and personal needs</h2>
+              <p class="section-copy">
+                I work across frontend development, electrical services, and printing because each of them solves a different but equally important part
+                of how people present themselves and keep their work moving. A website helps a brand be seen. Electrical support keeps spaces working properly.
+                Printed materials help ideas, products, and events reach people clearly.
+              </p>
+              <p class="section-copy">
+                What ties them together is the way I approach the work: understand the real need, communicate clearly, and deliver something that feels complete,
+                dependable, and useful. That is the standard I want attached to my name.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="d-flex gap-2 mt-4 reveal">
-        <a class="btn btn-neon" href="index.html#contact"><i class="bi bi-send"></i> Contact Me</a>
-        <a class="btn btn-ghost" href="gallery.html"><i class="bi bi-images"></i> View Gallery</a>
+    <section class="section-pad section-shell">
+      <div class="container">
+        <div class="stat-grid">
+          <article class="stat-card" data-reveal>
+            <strong>3</strong>
+            <span>Core service areas</span>
+          </article>
+          <article class="stat-card" data-reveal>
+            <strong>1</strong>
+            <span>Trusted point of contact</span>
+          </article>
+          <article class="stat-card" data-reveal>
+            <strong>Clear</strong>
+            <span>Client communication style</span>
+          </article>
+          <article class="stat-card" data-reveal>
+            <strong>Abuja</strong>
+            <span>Operating base</span>
+          </article>
+        </div>
       </div>
-    </div>
-  </header>
+    </section>
 
-  <!-- SERVICE DETAIL CARDS -->
-  <section class="section pt-0">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2 class="h1 fw-bold">Services In Detail</h2>
-        <p class="text-readable mb-0">Each service is structured, itemized, and client-ready.</p>
+    <section class="section-pad">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <article class="detail-card tone-web h-100" data-reveal>
+              <div class="detail-header">
+                <div class="service-icon"><i class="bi bi-person-workspace"></i></div>
+                <div>
+                  <h3>How I think about work</h3>
+                  <p>I care about the finished result, but I also care about how smooth the experience feels for the client.</p>
+                </div>
+              </div>
+              <ul class="feature-list tight">
+                <li>Communication should be simple and respectful</li>
+                <li>Work should be clear enough for clients to understand</li>
+                <li>Presentation matters because first impressions matter</li>
+                <li>Quality is not only about technical output but also about trust</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-lg-6">
+            <article class="detail-card tone-print h-100" data-reveal>
+              <div class="detail-header">
+                <div class="service-icon"><i class="bi bi-bullseye"></i></div>
+                <div>
+                  <h3>What clients can expect</h3>
+                  <p>The goal is to leave clients with something useful, well presented, and easier to act on.</p>
+                </div>
+              </div>
+              <ul class="feature-list tight">
+                <li>Practical advice rather than vague suggestions</li>
+                <li>Work that fits the real purpose of the project</li>
+                <li>A standard that balances speed and quality</li>
+                <li>A service mindset that stays focused on outcomes</li>
+              </ul>
+            </article>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="row g-4 mt-2">
+    <section class="section-pad section-shell">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow">Strength Areas</span>
+          <h2 class="section-title">Where my work adds the most value</h2>
+          <p class="section-copy">These are the situations where clients usually benefit most from working with me.</p>
+        </div>
 
-        <!-- WEB (image right) -->
-        <div class="col-12">
-          <div class="service-card service-web reveal">
-            <div class="row g-0 align-items-stretch">
-              <div class="col-lg-7 p-4 p-lg-5">
-                <div class="svc-head">
-                  <span class="svc-ico"><i class="bi bi-code-slash"></i></span>
-                  <div>
-                    <h3 class="h3 fw-bold mb-1">🌐 Frontend Web Developer Services</h3>
-                    <div class="text-readable">Luxury UI, responsive design, and interactive web experiences.</div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <article class="value-card" data-reveal>
+              <span class="value-number">01</span>
+              <h3>New businesses</h3>
+              <p>For brands that need a cleaner online presence, reliable setup support, or promotional materials.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="value-card" data-reveal>
+              <span class="value-number">02</span>
+              <h3>Personal brands</h3>
+              <p>For professionals who need a stronger presentation and easier ways for clients to take them seriously.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="value-card" data-reveal>
+              <span class="value-number">03</span>
+              <h3>Homes and offices</h3>
+              <p>For electrical tasks that need practical attention, maintenance, or cleaner installation work.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="value-card" data-reveal>
+              <span class="value-number">04</span>
+              <h3>Events and campaigns</h3>
+              <p>For flyers, cards, prints, and visual support that help a message travel further.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="section-heading text-start narrow" data-reveal>
+              <span class="eyebrow">Working Style</span>
+              <h2 class="section-title">The process behind the delivery</h2>
+            </div>
+
+            <div class="timeline-steps compact">
+              <article class="timeline-item" data-reveal>
+                <span>1</span>
+                <div>
+                  <h3>Listen carefully</h3>
+                  <p>Before doing anything, I want the actual problem to be clear.</p>
+                </div>
+              </article>
+              <article class="timeline-item" data-reveal>
+                <span>2</span>
+                <div>
+                  <h3>Keep the scope practical</h3>
+                  <p>The right solution should match the need, not just look impressive.</p>
+                </div>
+              </article>
+              <article class="timeline-item" data-reveal>
+                <span>3</span>
+                <div>
+                  <h3>Finish well</h3>
+                  <p>The output should be useful, neat, and something the client can feel confident sharing or using.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="faq-panel" data-reveal>
+              <span class="eyebrow">Quick Answers</span>
+              <h2 class="section-title">Frequently asked questions</h2>
+
+              <div class="accordion standard-accordion" id="aboutFaq">
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
+                      Why combine these different service areas in one portfolio?
+                    </button>
+                  </h3>
+                  <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#aboutFaq">
+                    <div class="accordion-body">
+                      Because they all support how clients present themselves, operate, and communicate. The portfolio shows that range clearly instead of hiding it.
+                    </div>
                   </div>
                 </div>
 
-                <div class="svc-list mt-4">
-                  <div class="svc-item"><i class="bi bi-ui-checks-grid"></i> Website UI Development (Figma/XD/PSD to HTML)</div>
-                  <div class="svc-item"><i class="bi bi-phone"></i> Responsive Web Design (mobile-first)</div>
-                  <div class="svc-item"><i class="bi bi-rocket-takeoff"></i> Landing Page Development</div>
-                  <div class="svc-item"><i class="bi bi-lightning"></i> Interactive Web Features (animations, modals, sliders)</div>
-                  <div class="svc-item"><i class="bi bi-bootstrap"></i> Frontend Framework Integration (Bootstrap / Tailwind)</div>
-                  <div class="svc-item"><i class="bi bi-braces"></i> React / Modern JavaScript Development</div>
-                  <div class="svc-item"><i class="bi bi-plug"></i> API Integration (REST / JSON)</div>
-                  <div class="svc-item"><i class="bi bi-arrow-repeat"></i> Website Redesign (UI/UX Improvement)</div>
-                  <div class="svc-item"><i class="bi bi-speedometer2"></i> Performance Optimization (lazy loading, minify)</div>
-                  <div class="svc-item"><i class="bi bi-globe2"></i> Cross-Browser Compatibility</div>
-                  <div class="svc-item"><i class="bi bi-bug"></i> Frontend Bug Fixing</div>
-                  <div class="svc-item"><i class="bi bi-wrench-adjustable-circle"></i> Website Maintenance (Frontend)</div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                      What kind of client is this best suited for?
+                    </button>
+                  </h3>
+                  <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#aboutFaq">
+                    <div class="accordion-body">
+                      Small businesses, professionals, event organizers, students, and people who need direct practical support without unnecessary complexity.
+                    </div>
+                  </div>
                 </div>
 
-                <div class="svc-cta mt-4">
-                  <a class="btn btn-neon" href="index.html#contact"><i class="bi bi-send"></i> Request Web Service</a>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                      How should a new client reach out?
+                    </button>
+                  </h3>
+                  <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#aboutFaq">
+                    <div class="accordion-body">
+                      The contact page is now the best place to start. It includes the full inquiry form, email, phone, WhatsApp, and location details.
+                    </div>
+                  </div>
                 </div>
-              </div>
-
-              <div class="col-lg-5 svc-img">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=70" alt="Web services image">
               </div>
             </div>
           </div>
         </div>
-
-        <!-- ELECTRICAL (image left) -->
-        <div class="col-12">
-          <div class="service-card service-elec reveal">
-            <div class="row g-0 align-items-stretch flex-lg-row-reverse">
-              <div class="col-lg-7 p-4 p-lg-5">
-                <div class="svc-head">
-                  <span class="svc-ico"><i class="bi bi-lightning-charge"></i></span>
-                  <div>
-                    <h3 class="h3 fw-bold mb-1">⚡ Electrical Services</h3>
-                    <div class="text-readable">Safety-first installation, troubleshooting, and protection systems.</div>
-                  </div>
-                </div>
-
-                <div class="svc-list mt-4">
-                  <div class="svc-item"><i class="bi bi-plug"></i> Installations (new wiring, rewiring, fittings)</div>
-                  <div class="svc-item"><i class="bi bi-lightbulb"></i> Lighting Services (indoor/outdoor, LED upgrade)</div>
-                  <div class="svc-item"><i class="bi bi-tools"></i> Repairs & Maintenance (fault detection)</div>
-                  <div class="svc-item"><i class="bi bi-house"></i> Residential Services (fans, heater, cooker, AC)</div>
-                  <div class="svc-item"><i class="bi bi-building"></i> Commercial Services (DB setup, inspections)</div>
-                  <div class="svc-item"><i class="bi bi-battery-charging"></i> Power & Backup Systems (inverter, changeover)</div>
-                  <div class="svc-item"><i class="bi bi-shield-check"></i> Safety & Protection (earthing, breakers, surge)</div>
-                  <div class="svc-item"><i class="bi bi-camera-video"></i> Specialized (solar connection, CCTV, fence)</div>
-                </div>
-
-                <div class="svc-cta mt-4">
-                  <a class="btn btn-neon" href="index.html#contact"><i class="bi bi-send"></i> Request Electrical Service</a>
-                </div>
-              </div>
-
-              <div class="col-lg-5 svc-img">
-                <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1600&q=70" alt="Electrical services image">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PRINT (image right) -->
-        <div class="col-12">
-          <div class="service-card service-print reveal">
-            <div class="row g-0 align-items-stretch">
-              <div class="col-lg-7 p-4 p-lg-5">
-                <div class="svc-head">
-                  <span class="svc-ico"><i class="bi bi-printer"></i></span>
-                  <div>
-                    <h3 class="h3 fw-bold mb-1">🖨 General Printing Services</h3>
-                    <div class="text-readable">Sharp prints, premium finishing, and fast turnaround for brands & events.</div>
-                  </div>
-                </div>
-
-                <div class="svc-list mt-4">
-                  <div class="svc-item"><i class="bi bi-file-earmark-text"></i> Document Printing (B/W, colour, bulk)</div>
-                  <div class="svc-item"><i class="bi bi-journal-bookmark"></i> Booklet & Binding (spiral/comb/hard/soft)</div>
-                  <div class="svc-item"><i class="bi bi-briefcase"></i> Business Materials (cards, letterheads, receipts)</div>
-                  <div class="svc-item"><i class="bi bi-megaphone"></i> Branding Prints (flyers, posters, brochures, banners)</div>
-                  <div class="svc-item"><i class="bi bi-tags"></i> Labels & Stickers (custom/transparent/product)</div>
-                  <div class="svc-item"><i class="bi bi-balloon"></i> Event Prints (invites, programs, souvenirs)</div>
-                  <div class="svc-item"><i class="bi bi-mortarboard"></i> Educational (manuals, certificates, training)</div>
-                  <div class="svc-item"><i class="bi bi-aspect-ratio"></i> Large Format (signage, backdrops, wall branding)</div>
-                  <div class="svc-item"><i class="bi bi-stars"></i> Specialty (shirts, mugs, caps, nylon, packaging)</div>
-                </div>
-
-                <div class="svc-cta mt-4">
-                  <a class="btn btn-neon" href="index.html#contact"><i class="bi bi-send"></i> Request Printing Service</a>
-                </div>
-              </div>
-
-              <div class="col-lg-5 svc-img">
-                <img src="https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&w=1600&q=70" alt="Printing services image">
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
+    <section class="section-pad section-shell">
+      <div class="container">
+        <div class="cta-panel" data-reveal>
+          <div>
+            <span class="eyebrow">Next Step</span>
+            <h2 class="section-title">Want to see the full service breakdown?</h2>
+            <p class="section-copy mb-0">The dedicated services page now carries the detailed offering instead of keeping that content on the home page.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-brand" href="services.html">View Services</a>
+            <a class="btn btn-outline-brand" href="contact.html">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <div class="footer-motto">
-            <i class="bi bi-gem"></i>
-            <span>We Build It, Power It, And Bring It to Life With Innovation in Web, Precision in Power, Quality in Printing.</span>
-            <i class="bi bi-gem"></i>
-          </div>
-          <div class="text-dim small">
-            Premium service delivery across Web Developments, Electrical Works, and General Printing Solutions — Built For Quality And Trust.
-          </div>
-          <div class="footer-social">
-            <a class="social-btn sm" href="https://www.linkedin.com/in/daniel-jegbefumhen-944aa9156/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a class="social-btn sm" href="https://github.com/Lorddan212" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
-            <a class="social-btn sm" href="https://x.com/lorddan212" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-            <a class="social-btn sm" href="https://www.tiktok.com/@lorddan212?lang=en" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-            <a class="social-btn sm" href="https://www.youtube.com/@Lorddan212" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-            <a class="social-btn sm" href="https://web.facebook.com/Lorddan212" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          </div>
-        </div>
-
-        <div class="footer-links">
-          <div class="fw-bold mb-2">Quick Links</div>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="index.html#tracks">My Tracks</a>
-          <a href="index.html#work">Portfolio</a>
-          <a href="index.html#contact">Contact</a>
-        </div>
-
-        <div class="footer-links">
-          <div class="fw-bold mb-2">Contact</div>
-          <a href="mailto:jegbefumhendaniel@gmail.com"><i class="bi bi-envelope-at me-2"></i> Email</a>
-          <a href="tel:+2348109368514"><i class="bi bi-telephone me-2"></i> Phone</a>
-          <a href="https://wa.me/2348109368514?text=Hi%20Daniel%2C%20I%20saw%20your%20portfolio%20and%20I%20want%20to%20discuss%20a%20project%2Fservice." target="_blank">
-            <i class="bi bi-whatsapp me-2"></i> WhatsApp
-          </a>
-          <a href="https://www.google.com/maps/search/?api=1&query=Plot%20346%20Plase%201%20Lugbe%20Airport%20Road%20FCT%20Abuja%20Nigeria" target="_blank">
-            <i class="bi bi-geo-alt me-2"></i> Plot 346 Plase 1 Lugbe, Abuja
-          </a>
-        </div>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand-mark footer-brand" href="index.html">
+          <img src="assets/img/Link Logo.png" alt="Daniel Jegbe logo">
+          <span>
+            <strong>Daniel Jegbe</strong>
+            <small>Portfolio</small>
+          </span>
+        </a>
+        <p class="footer-copy">Frontend web development, electrical support, and print services delivered with clarity and care.</p>
       </div>
 
-      <div class="footer-bottom">
-        <div>© <span id="year"></span> Daniel Odion Jegbefumhen. All rights reserved.</div>
-        <div class="text-dim">From Pixels to Power to Print — Premium Solutions, End-to-End.</div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
+
+      <div>
+        <h3>Contact</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:jegbefumhendaniel@gmail.com">jegbefumhendaniel@gmail.com</a></li>
+          <li><a href="tel:+2348109368514">+2348109368514</a></li>
+          <li><a href="#" data-whatsapp-link>WhatsApp chat</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year></span> Daniel Odion Jegbefumhen. All rights reserved.</p>
     </div>
   </footer>
 

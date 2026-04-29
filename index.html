@@ -1,678 +1,371 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Daniel Odion Jegbefumhen — Portfolio</title>
-  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daniel Odion Jegbefumhen | Multi-Service Portfolio</title>
+  <meta name="description" content="Portfolio of Daniel Odion Jegbefumhen, offering frontend web development, electrical services, and printing solutions in Abuja, Nigeria.">
   <link rel="icon" type="image/png" href="assets/img/Link Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="css/style.css" />
-
-  <meta name="description" content="Frontend Web Developer • Electrical Engineer • General Printing Services" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <!-- Animated Background -->
-  <div class="fx-bg" aria-hidden="true">
-    <div class="fx-grid"></div>
-    <div class="fx-corner-glow glow-tl"></div>
-    <div class="fx-corner-glow glow-tr"></div>
-    <div class="fx-corner-glow glow-bl"></div>
-    <div class="fx-corner-glow glow-br"></div>
-    <div class="hero-tech-stage fx-global-tech" aria-hidden="true">
-      <div class="hero-circuit-frame">
-        <span class="hero-node node-tl"></span>
-        <span class="hero-node node-tr"></span>
-        <span class="hero-node node-bl"></span>
-        <span class="hero-node node-br"></span>
-        <span class="hero-node node-lm"></span>
-        <span class="hero-node node-rm"></span>
-        <span class="hero-node node-tm"></span>
-        <span class="hero-node node-bm"></span>
-
-        <div class="hero-hub-chip" aria-hidden="true">
-          <span class="hub-chip-core"></span>
-        </div>
-        <div class="hero-hub-trace hub-trace-top"></div>
-        <div class="hero-hub-trace hub-trace-right"></div>
-        <div class="hero-hub-trace hub-trace-bottom"></div>
-        <div class="hero-hub-trace hub-trace-left"></div>
-        <div class="hero-hub-trace hub-trace-tl"></div>
-        <div class="hero-hub-trace hub-trace-tr"></div>
-        <div class="hero-hub-trace hub-trace-bl"></div>
-        <div class="hero-hub-trace hub-trace-br"></div>
-        <div class="hero-hub-trace hub-trace-zig-r1"></div>
-        <div class="hero-hub-trace hub-trace-zig-r2"></div>
-        <div class="hero-hub-trace hub-trace-zig-l1"></div>
-        <div class="hero-hub-trace hub-trace-zig-l2"></div>
-        <div class="hero-hub-trace hub-trace-zig-t1"></div>
-        <div class="hero-hub-trace hub-trace-zig-b1"></div>
-        <div class="hero-hub-trace hub-trace-zig-tr1"></div>
-        <div class="hero-hub-trace hub-trace-zig-bl1"></div>
-      </div>
-
-      <div class="hero-live-core">
-        <div class="core-glow"></div>
-        <div class="core-ring ring-1"></div>
-        <div class="core-ring ring-2"></div>
-        <div class="core-ring ring-3"></div>
-        <div class="core-ring ring-4"></div>
-        <div class="core-ring ring-5"></div>
-        <div class="core-center">
-          <span id="heroSkillWord" class="core-word">HTML</span>
-        </div>
-      </div>
-    </div>
-    <canvas id="fxCanvas"></canvas>
+  <div class="site-bg" aria-hidden="true">
+    <span class="bg-blur blur-a"></span>
+    <span class="bg-blur blur-b"></span>
+    <span class="bg-grid"></span>
   </div>
 
-  <div id="scrollProgress" class="scroll-progress"></div>
-
-  <!-- NAV -->
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-glass">
+  <nav class="navbar navbar-expand-lg site-nav sticky-top">
     <div class="container">
-      <a class="navbar-brand brand" href="index.html">
-        <img class="brand-icon" src="assets/img/Link Logo.png" alt="" aria-hidden="true">
-        <span class="fw-semibold">Daniel Jegbe</span>
-        <span class="brand-sub">Portfolio</span>
+      <a class="navbar-brand brand-mark" href="index.html">
+        <img src="assets/img/Link Logo.png" alt="Daniel Jegbe logo">
+        <span>
+          <strong>Daniel Jegbe</strong>
+          <small>Portfolio</small>
+        </span>
       </a>
 
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div id="nav" class="collapse navbar-collapse">
+      <div class="collapse navbar-collapse" id="siteNav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item">
-            <a class="nav-link" href="about.html"><i class="bi bi-person-circle me-1"></i>About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html"><i class="bi bi-images me-1"></i>Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#tracks"><i class="bi bi-diagram-3 me-1"></i>My Tracks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#work"><i class="bi bi-grid-3x3-gap me-1"></i>Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact"><i class="bi bi-chat-dots me-1"></i>Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           <li class="nav-item ms-lg-2">
-            <button id="themeToggle" class="btn btn-ghost btn-sm px-3" type="button" aria-label="Toggle theme">
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">
               <i class="bi bi-moon-stars"></i>
+              <span>Theme</span>
             </button>
           </li>
-
           <li class="nav-item ms-lg-2">
-            <a class="btn btn-neon btn-sm px-3" href="#contact">
-              <i class="bi bi-lightning-charge"></i> Hire Me
-            </a>
+            <a class="btn btn-brand" href="contact.html">Book a Project</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="section hero" id="home">
-    <div class="container">
-      <div class="row g-4 align-items-center">
+  <main>
+    <header class="hero section-pad">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <span class="eyebrow" data-reveal>Abuja, Nigeria</span>
+            <h1 class="display-title" data-reveal>Clean digital work, dependable power solutions, and quality print delivery.</h1>
+            <p class="hero-copy" data-reveal>
+              I am Daniel Odion Jegbefumhen, a multi-service professional helping clients present their brands well, solve practical technical needs,
+              and deliver polished project outcomes across frontend web development, electrical services, and general printing.
+            </p>
 
-        <!-- DP FIRST on small screens -->
-        <div class="col-lg-5 order-0 order-lg-0">
-          <div class="dp-wrap reveal">
-            <div class="dp-shield tilt-card fx-crosszoom">
-
-              <!-- Shield border + clipPath (same shield aspect from earlier) -->
-              <svg class="shield-border" viewBox="0 0 200 240" preserveAspectRatio="none" aria-hidden="true">
-                <defs>
-                  <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="var(--blue)"></stop>
-                    <stop offset="40%" stop-color="var(--purple1)"></stop>
-                    <stop offset="70%" stop-color="var(--green)"></stop>
-                    <stop offset="100%" stop-color="var(--gold)"></stop>
-                  </linearGradient>
-
-                  <clipPath id="shieldClip">
-                    <path d="M 100,10 L 180,40 L 180,140 Q 180,200 100,230 Q 20,200 20,140 L 20,40 Z"></path>
-                  </clipPath>
-                </defs>
-
-                <path
-                  d="M 100,10 L 180,40 L 180,140 Q 180,200 100,230 Q 20,200 20,140 L 20,40 Z"
-                  fill="none"
-                  stroke="url(#shieldGradient)"
-                  stroke-width="4"
-                  class="shield-stroke"
-                ></path>
-              </svg>
-
-              <!-- Image area (two layers crossfade so no blank gap) -->
-              <div class="shield-image-area">
-                <svg class="shield-layer is-active" viewBox="0 0 200 240" preserveAspectRatio="none">
-                  <image
-                    id="profileImgA"
-                    href=""
-                    clip-path="url(#shieldClip)"
-                    width="200"
-                    height="240"
-                    preserveAspectRatio="xMidYMid slice"
-                  ></image>
-                </svg>
-
-                <svg class="shield-layer" viewBox="0 0 200 240" preserveAspectRatio="none">
-                  <image
-                    id="profileImgB"
-                    href=""
-                    clip-path="url(#shieldClip)"
-                    width="200"
-                    height="240"
-                    preserveAspectRatio="xMidYMid slice"
-                  ></image>
-                </svg>
-              </div>
-
-
-              <div class="dp-badges" aria-hidden="true">
-                <span class="dp-badge b-web"><i class="bi bi-code-slash"></i></span>
-                <span class="dp-badge b-elec"><i class="bi bi-lightning-charge"></i></span>
-                <span class="dp-badge b-print"><i class="bi bi-printer"></i></span>
-              </div>
+            <div class="hero-actions" data-reveal>
+              <a class="btn btn-brand" href="services.html">Explore Services</a>
+              <a class="btn btn-outline-brand" href="contact.html">Start a Project</a>
             </div>
 
-            <div class="dp-status">
-              <span class="pulse"></span>
-              Available for Projects
+            <div class="badge-cluster" data-reveal>
+              <span class="accent-badge"><i class="bi bi-code-slash"></i> Frontend Web Developer</span>
+              <span class="accent-badge"><i class="bi bi-lightning-charge"></i> Electrical Technician</span>
+              <span class="accent-badge"><i class="bi bi-printer"></i> General Printing Services</span>
             </div>
+          </div>
+
+          <div class="col-lg-5">
+            <aside class="profile-panel" data-reveal>
+              <div class="profile-media">
+                <img id="heroProfileImage" src="assets/img/Dan_HD.png" alt="Portrait of Daniel Odion Jegbefumhen">
+              </div>
+              <div class="profile-copy">
+                <span class="status-pill"><span class="status-dot"></span> Available for client work</span>
+                <h2>Professional support with one reliable contact</h2>
+                <p>
+                  Whether you need a business website, a repair or installation job, or branded printed materials,
+                  the focus stays on clarity, quality, and results you can confidently use.
+                </p>
+              </div>
+            </aside>
           </div>
         </div>
+      </div>
+    </header>
 
-        <div class="col-lg-7 order-1 order-lg-1">
-          <h1 class="display-4 fw-bold hero-title reveal">
-            Hi, I’m
-            <span class="text-glow d-inline-block">
-              <span id="typedName"></span><span class="typing-caret">|</span>
-            </span>
-          </h1>
-
-          <div class="chip mt-3 mb-3 reveal">
-            <i class="bi bi-stars"></i>
-            <span>Frontend Web Developer | Electrical Engineer | General Printing Services</span>
-            <i class="bi bi-stars"></i>
-          </div>
-
-          <!-- <div class="hero-sub reveal mt-2">
-            Frontend Web Developer • Electrical Engineer • General Printing Services
-          </div> -->
-
-          <p class="lead mt-3 text-readable reveal" style="font-weight: 600">
-            I deliver premium results across three powerful lanes: modern frontend websites that look expensive and work flawlessly,
-            safe and reliable electrical installations/maintenance, and high-quality printing that makes brands and events stand out.
-            I’m detail-focused, fast, and quality-driven — let’s build something outstanding.
+    <section class="section-pad section-shell">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow">Service Snapshot</span>
+          <h2 class="section-title">Three service paths, one standard of delivery</h2>
+          <p class="section-copy">
+            The site now has a dedicated services page, but here is a quick overview of the kind of work I help clients with most often.
           </p>
+        </div>
 
-          <div class="motto reveal mt-3">
-            <i class="bi bi-gem"></i>
-            <span>We Build It, Power It, And Bring It to Life With Innovation in Web, Precision in Power, Quality in Printing.</span>
-            <i class="bi bi-gem"></i>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <article class="service-card tone-web" data-reveal>
+              <div class="service-icon"><i class="bi bi-code-slash"></i></div>
+              <h3>Web Development</h3>
+              <p>Responsive websites and modern interfaces that help brands look more professional online.</p>
+              <ul class="feature-list">
+                <li>Business and portfolio websites</li>
+                <li>Landing pages and frontend redesign</li>
+                <li>UI cleanup, content flow, and interaction polish</li>
+              </ul>
+            </article>
           </div>
 
-          <div class="d-flex flex-wrap gap-2 mt-4 reveal">
-            <a class="btn btn-neon px-4" href="#work"><i class="bi bi-grid-3x3-gap"></i> View My Work</a>
-            <a class="btn btn-ghost px-4" href="#tracks"><i class="bi bi-diagram-3"></i> My Tracks</a>
-            <a class="btn btn-ghost px-4" href="#contact"><i class="bi bi-chat-dots"></i> Contact</a>
+          <div class="col-lg-4">
+            <article class="service-card tone-electric" data-reveal>
+              <div class="service-icon"><i class="bi bi-lightning-charge"></i></div>
+              <h3>Electrical Services</h3>
+              <p>Practical electrical support for homes, small businesses, and everyday maintenance needs.</p>
+              <ul class="feature-list">
+                <li>Wiring, fittings, and repairs</li>
+                <li>Lighting and socket installation</li>
+                <li>Maintenance, troubleshooting, and safety support</li>
+              </ul>
+            </article>
           </div>
 
-          <div class="social mt-4 reveal">
-            <a class="social-btn" href="https://www.linkedin.com/in/daniel-jegbefumhen-944aa9156/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a class="social-btn" href="https://github.com/Lorddan212" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
-            <a class="social-btn" href="https://x.com/lorddan212" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-            <a class="social-btn" href="https://www.tiktok.com/@lorddan212?lang=en" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-            <a class="social-btn" href="https://www.youtube.com/@Lorddan212" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-            <a class="social-btn" href="https://web.facebook.com/Lorddan212" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <div class="col-lg-4">
+            <article class="service-card tone-print" data-reveal>
+              <div class="service-icon"><i class="bi bi-printer"></i></div>
+              <h3>Printing Services</h3>
+              <p>Printed materials that help businesses, students, and event organizers communicate more clearly.</p>
+              <ul class="feature-list">
+                <li>Flyers, posters, and business materials</li>
+                <li>Binding, labels, and event prints</li>
+                <li>Bulk jobs with attention to finish</li>
+              </ul>
+            </article>
           </div>
         </div>
 
+        <div class="section-cta text-center" data-reveal>
+          <a class="btn btn-brand" href="services.html">See Full Services</a>
+        </div>
       </div>
-    </div>
-    
-    <div class="container mt-4 d-flex flex-wrap gap-2 reveal">
-            <div class="mini-stat">
-              <div class="mini-stat-num">Web</div>
-              <div class="mini-stat-label">Frontend & UI</div>
-            </div>
-            <div class="mini-stat">
-              <div class="mini-stat-num">Electrical</div>
-              <div class="mini-stat-label">Install & Maintenance</div>
-            </div>
-            <div class="mini-stat">
-              <div class="mini-stat-num">Print</div>
-              <div class="mini-stat-label">Brand & Event</div>
-            </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container">
+        <div class="split-banner" data-reveal>
+          <div>
+            <span class="eyebrow">Why This Portfolio Works</span>
+            <h2 class="section-title">Built for real clients, real needs, and real follow-through</h2>
           </div>
+          <p class="section-copy mb-0">
+            This portfolio is not only about showing skills. It is designed to help a visitor quickly understand what I do,
+            what kind of work I take on, and how easy it is to reach me when they are ready to start.
+          </p>
         </div>
 
-    <!-- Floating WhatsApp -->
-    <a id="whatsappFloat" class="wa-float" href="#" target="_blank" aria-label="WhatsApp chat">
-      <i class="bi bi-whatsapp"></i>
-    </a>
-  </header>
-
-  <!-- MY TRACKS -->
-  <section id="tracks" class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2 class="h1 fw-bold">My Tracks</h2>
-        <p class="text-readable mb-0">Three professional lanes — one premium brand.</p>
-      </div>
-
-      <div class="row g-4 mt-2">
-        <div class="col-md-6 col-lg-4">
-          <div class="track-card track-web tilt-card reveal">
-            <div class="track-top">
-              <span class="track-icon"><i class="bi bi-code-slash"></i></span>
-              <span class="track-tag">Web</span>
-            </div>
-            <h3 class="h4 mt-3 fw-semibold">Frontend Web Development</h3>
-            <p class="text-readable">Luxury UI, responsive layouts, interactive frontend experiences, load fast, and work flawlessly on every screen.</p>
-            <ul class="list-unstyled small text-readable mb-0">
-              <li class="li"><i class="bi bi-check2"></i> Portfolio / Business Websites</li>
-              <li class="li"><i class="bi bi-check2"></i> Landing Pages & Funnels</li>
-              <li class="li"><i class="bi bi-check2"></i> Redesign, Speed & SEO Basics</li>
-            </ul>
-            <div class="track-fx web-fx" aria-hidden="true">
-              <span class="scan"></span>
-              <span class="particles"></span>
-            </div>
+        <div class="row g-4 mt-1">
+          <div class="col-md-4">
+            <article class="value-card" data-reveal>
+              <span class="value-number">01</span>
+              <h3>Professional presentation</h3>
+              <p>Clear structure, polished visuals, and direct messaging help clients trust the service faster.</p>
+            </article>
           </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="track-card track-elec tilt-card reveal">
-            <div class="track-top">
-              <span class="track-icon"><i class="bi bi-lightning-charge"></i></span>
-              <span class="track-tag">Electrical</span>
-            </div>
-            <h3 class="h4 mt-3 fw-semibold">Electrical Engineering</h3>
-            <p class="text-readable">Safe, clean installations, troubleshooting, clean power solutions, and maintenance for homes and offices..</p>
-            <ul class="list-unstyled small text-readable mb-0">
-              <li class="li"><i class="bi bi-check2"></i> Wiring, Sockets, Distribution</li>
-              <li class="li"><i class="bi bi-check2"></i> Fault Diagnosis & Fixes</li>
-              <li class="li"><i class="bi bi-check2"></i> Preventive Maintenance</li>
-            </ul>
-            <div class="track-fx elec-fx" aria-hidden="true">
-              <span class="bolt"></span>
-              <span class="spark"></span>
-            </div>
+          <div class="col-md-4">
+            <article class="value-card" data-reveal>
+              <span class="value-number">02</span>
+              <h3>Useful technical support</h3>
+              <p>The work spans digital presentation, electrical service, and print support without losing focus.</p>
+            </article>
           </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="track-card track-print tilt-card reveal">
-            <div class="track-top">
-              <span class="track-icon"><i class="bi bi-printer"></i></span>
-              <span class="track-tag">Print</span>
-            </div>
-            <h3 class="h4 mt-3 fw-semibold">General Printing</h3>
-            <p class="text-readable">Premium high-quality printing that makes your brand, events and marketing looks premium and unforgettable.</p>
-            <ul class="list-unstyled small text-readable mb-0">
-              <li class="li"><i class="bi bi-check2"></i> Flyers, Banners, Business Cards</li>
-              <li class="li"><i class="bi bi-check2"></i> Event Branding & Designs</li>
-              <li class="li"><i class="bi bi-check2"></i> Bulk Orders (Fast Turnaround)</li>
-            </ul>
-            <div class="track-fx print-fx" aria-hidden="true">
-              <span class="paper"></span>
-              <span class="ink"></span>
-            </div>
+          <div class="col-md-4">
+            <article class="value-card" data-reveal>
+              <span class="value-number">03</span>
+              <h3>Easy communication</h3>
+              <p>Email, phone, WhatsApp, and a dedicated contact page keep the next step simple for visitors.</p>
+            </article>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <section class="section-pad section-shell">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow">Featured Focus</span>
+          <h2 class="section-title">The kind of results I help create</h2>
+          <p class="section-copy">
+            These are the categories of outcomes clients usually want from my work, whether online, on-site, or in print.
+          </p>
+        </div>
 
-  <!-- PORTFOLIO -->
-  <section id="work" class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2 class="h1 fw-bold">Portfolio</h2>
-        <p class="text-readable mb-0">Samples for now — replace anytime.</p>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <article class="portfolio-card" data-reveal>
+              <div class="portfolio-thumb thumb-web"><span>Web</span></div>
+              <div class="portfolio-body">
+                <span class="tag-pill">Brand Presence</span>
+                <h3>Professional business websites</h3>
+                <p>Pages that help a service provider, personal brand, or small business look established and credible.</p>
+                <a class="inline-link" href="gallery.html">View gallery <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <article class="portfolio-card" data-reveal>
+              <div class="portfolio-thumb thumb-electric"><span>Power</span></div>
+              <div class="portfolio-body">
+                <span class="tag-pill">Electrical Support</span>
+                <h3>Installations and maintenance</h3>
+                <p>Work that keeps homes and workspaces safer, more functional, and better organized.</p>
+                <a class="inline-link" href="services.html">View services <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <article class="portfolio-card" data-reveal>
+              <div class="portfolio-thumb thumb-print"><span>Print</span></div>
+              <div class="portfolio-body">
+                <span class="tag-pill">Promotion</span>
+                <h3>Printed materials that represent well</h3>
+                <p>Business cards, flyers, event materials, and branding assets with a more polished finish.</p>
+                <a class="inline-link" href="contact.html">Request a quote <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="row g-4 mt-2">
+    <section class="section-pad">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-6">
+            <div class="section-heading text-start narrow" data-reveal>
+              <span class="eyebrow">How I Work</span>
+              <h2 class="section-title">Simple process, serious attention to detail</h2>
+            </div>
 
-        <!-- WEB x3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="work-card work-web tilt-card reveal">
-            <div class="work-thumb">
-              <img class="work-img" src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1400&q=70" alt="Web project sample">
-            </div>
-            <div class="p-3">
-              <div class="d-flex justify-content-between align-items-center">
-                <h3 class="h5 mb-0 fw-semibold">Luxury Business Website</h3>
-                <span class="badge badge-web">Web</span>
-              </div>
-              <p class="text-readable small mt-2 mb-3">Premium UI and responsive layout for a modern brand.</p>
-              <div class="d-flex gap-2">
-                <a class="btn btn-ghost btn-sm" href="#" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Live</a>
-                <a class="btn btn-ghost btn-sm" href="#" target="_blank"><i class="bi bi-github"></i> Code</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="work-card work-web tilt-card reveal">
-            <div class="work-thumb">
-              <img class="work-img" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1400&q=70" alt="Web project sample">
-            </div>
-            <div class="p-3">
-              <div class="d-flex justify-content-between align-items-center">
-                <h3 class="h5 mb-0 fw-semibold">Campaign Landing Page</h3>
-                <span class="badge badge-web">Web</span>
-              </div>
-              <p class="text-readable small mt-2 mb-3">High-converting structure with clean UI and CTA flow.</p>
-              <div class="d-flex gap-2">
-                <a class="btn btn-ghost btn-sm" href="#" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Live</a>
-                <a class="btn btn-ghost btn-sm" href="#" target="_blank"><i class="bi bi-github"></i> Code</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="work-card work-web tilt-card reveal">
-            <div class="work-thumb">
-              <img class="work-img" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1400&q=70" alt="Web project sample">
-            </div>
-            <div class="p-3">
-              <div class="d-flex justify-content-between align-items-center">
-                <h3 class="h5 mb-0 fw-semibold">Portfolio UI Showcase</h3>
-                <span class="badge badge-web">Web</span>
-              </div>
-              <p class="text-readable small mt-2 mb-3">Futuristic UI layout with interactive components.</p>
-              <div class="d-flex gap-2">
-                <a class="btn btn-ghost btn-sm" href="#" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Live</a>
-                <a class="btn btn-ghost btn-sm" href="#" target="_blank"><i class="bi bi-github"></i> Code</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ELECTRICAL x3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="work-card work-elec tilt-card reveal">
-            <div class="work-thumb">
-              <img class="work-img" src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=1400&q=70" alt="Electrical sample">
-            </div>
-            <div class="p-3">
-              <div class="d-flex justify-content-between align-items-center">
-                <h3 class="h5 mb-0 fw-semibold">House Wiring Setup</h3>
-                <span class="badge badge-elec">Electrical</span>
-              </div>
-              <p class="text-readable small mt-2 mb-3">Safety-first wiring and neat finishing.</p>
-              <div class="d-flex gap-2">
-                <a class="btn btn-ghost btn-sm" href="#contact"><i class="bi bi-chat-dots"></i> Request Quote</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="work-card work-elec tilt-card reveal">
-            <div class="work-thumb">
-              <img class="work-img" src="https://images.unsplash.com/photo-1581092795360-7a24f1f5d9f0?auto=format&fit=crop&w=1400&q=70" alt="Electrical sample">
-            </div>
-            <div class="p-3">
-              <div class="d-flex justify-content-between align-items-center">
-                <h3 class="h5 mb-0 fw-semibold">Distribution Board</h3>
-                <span class="badge badge-elec">Electrical</span>
-              </div>
-              <p class="text-readable small mt-2 mb-3">Load balancing, clean routing, and protection.</p>
-              <div class="d-flex gap-2">
-                <a class="btn btn-ghost btn-sm" href="#contact"><i class="bi bi-chat-dots"></i> Request Quote</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="work-card work-elec tilt-card reveal">
-            <div class="work-thumb">
-              <img class="work-img" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1400&q=70" alt="Electrical sample">
-            </div>
-            <div class="p-3">
-              <div class="d-flex justify-content-between align-items-center">
-                <h3 class="h5 mb-0 fw-semibold">Power / Backup Setup</h3>
-                <span class="badge badge-elec">Electrical</span>
-              </div>
-              <p class="text-readable small mt-2 mb-3">Inverter, changeover, and stability checks.</p>
-              <div class="d-flex gap-2">
-                <a class="btn btn-ghost btn-sm" href="#contact"><i class="bi bi-chat-dots"></i> Request Quote</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PRINT x3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="work-card work-print tilt-card reveal">
-            <div class="work-thumb">
-              <img class="work-img" src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1400&q=70" alt="Printing sample">
-            </div>
-            <div class="p-3">
-              <div class="d-flex justify-content-between align-items-center">
-                <h3 class="h5 mb-0 fw-semibold">Brand Print Pack</h3>
-                <span class="badge badge-print">Print</span>
-              </div>
-              <p class="text-readable small mt-2 mb-3">Flyers, cards, and branded materials.</p>
-              <div class="d-flex gap-2">
-                <a class="btn btn-ghost btn-sm" href="#contact"><i class="bi bi-whatsapp"></i> Order</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="work-card work-print tilt-card reveal">
-            <div class="work-thumb">
-              <img class="work-img" src="https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&w=1400&q=70" alt="Printing sample">
-            </div>
-            <div class="p-3">
-              <div class="d-flex justify-content-between align-items-center">
-                <h3 class="h5 mb-0 fw-semibold">Event Prints</h3>
-                <span class="badge badge-print">Print</span>
-              </div>
-              <p class="text-readable small mt-2 mb-3">Programs, tags, invitations, and souvenirs.</p>
-              <div class="d-flex gap-2">
-                <a class="btn btn-ghost btn-sm" href="#contact"><i class="bi bi-whatsapp"></i> Order</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="work-card work-print tilt-card reveal">
-            <div class="work-thumb">
-              <img class="work-img" src="https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=1400&q=70" alt="Printing sample">
-            </div>
-            <div class="p-3">
-              <div class="d-flex justify-content-between align-items-center">
-                <h3 class="h5 mb-0 fw-semibold">Large Format</h3>
-                <span class="badge badge-print">Print</span>
-              </div>
-              <p class="text-readable small mt-2 mb-3">Banners, signage, backdrops, wall branding.</p>
-              <div class="d-flex gap-2">
-                <a class="btn btn-ghost btn-sm" href="#contact"><i class="bi bi-whatsapp"></i> Order</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section pb-5">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2 class="h1 fw-bold">Contact</h2>
-        <p class="text-readable mb-0">Fast response. Clean communication. Premium results.</p>
-      </div>
-
-      <div class="row g-4 mt-2">
-        <div class="col-lg-5">
-          <div class="glass-card p-4 reveal">
-            <h3 class="h4 fw-semibold">Reach Me</h3>
-
-            <div class="contact-list mt-3">
-              <a class="contact-item" href="mailto:jegbefumhendaniel@gmail.com">
-                <span class="c-ico"><i class="bi bi-envelope-at"></i></span>
+            <div class="timeline-steps">
+              <article class="timeline-item" data-reveal>
+                <span>1</span>
                 <div>
-                  <div class="c-title">Email</div>
-                  <div class="c-sub">jegbefumhendaniel@gmail.com</div>
+                  <h3>Understand the brief</h3>
+                  <p>I start by understanding the need clearly so the work fits the real purpose and budget.</p>
                 </div>
-                <span class="c-go"><i class="bi bi-arrow-up-right"></i></span>
-              </a>
+              </article>
 
-              <a class="contact-item" href="tel:+2348109368514">
-                <span class="c-ico"><i class="bi bi-telephone"></i></span>
+              <article class="timeline-item" data-reveal>
+                <span>2</span>
                 <div>
-                  <div class="c-title">Phone</div>
-                  <div class="c-sub">+2348109368514</div>
+                  <h3>Plan the right solution</h3>
+                  <p>The project is shaped around what is practical, presentable, and actually useful to the client.</p>
                 </div>
-                <span class="c-go"><i class="bi bi-arrow-up-right"></i></span>
-              </a>
+              </article>
 
-              <a id="whatsappContact" class="contact-item" href="#" target="_blank">
-                <span class="c-ico"><i class="bi bi-whatsapp"></i></span>
+              <article class="timeline-item" data-reveal>
+                <span>3</span>
                 <div>
-                  <div class="c-title">WhatsApp</div>
-                  <div class="c-sub">Chat directly</div>
+                  <h3>Deliver with care</h3>
+                  <p>Every output should feel complete, not rushed, whether it is a website, technical task, or printed item.</p>
                 </div>
-                <span class="c-go"><i class="bi bi-arrow-up-right"></i></span>
-              </a>
-
-              <a class="contact-item" href="https://www.google.com/maps/search/?api=1&query=Plot%20346%20Plase%201%20Lugbe%20Airport%20Road%20FCT%20Abuja%20Nigeria" target="_blank">
-                <span class="c-ico"><i class="bi bi-geo-alt"></i></span>
-                <div>
-                  <div class="c-title">Address</div>
-                  <div class="c-sub">Plot 346 Plase 1 Lugbe Airport Road, FCT - Abuja, Nigeria</div>
-                </div>
-                <span class="c-go"><i class="bi bi-arrow-up-right"></i></span>
-              </a>
+              </article>
             </div>
+          </div>
 
-            <div class="map-wrap mt-4">
-              <iframe
-                title="Map - Lugbe Abuja"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=Plot%20346%20Plase%201%20Lugbe%20Airport%20Road%20FCT%20Abuja%20Nigeria&output=embed">
-              </iframe>
+          <div class="col-lg-6">
+            <div class="about-panel" data-reveal>
+              <span class="eyebrow">About Daniel</span>
+              <h2 class="section-title">A versatile professional with a service mindset</h2>
+              <p class="section-copy">
+                My work is built around helping clients solve visible and practical needs. A website helps them appear credible.
+                Electrical work helps their space function properly. Printing helps their message travel further. Each service connects to the same goal:
+                make the client look prepared and feel supported.
+              </p>
+              <div class="mini-grid">
+                <div class="mini-tile">
+                  <strong>Based in</strong>
+                  <span>Abuja, Nigeria</span>
+                </div>
+                <div class="mini-tile">
+                  <strong>Best for</strong>
+                  <span>Businesses, professionals, events, and practical service requests</span>
+                </div>
+                <div class="mini-tile">
+                  <strong>Approach</strong>
+                  <span>Clear communication and straightforward delivery</span>
+                </div>
+                <div class="mini-tile">
+                  <strong>Next step</strong>
+                  <span>Reach out through the contact page</span>
+                </div>
+              </div>
+              <a class="btn btn-outline-brand mt-4" href="about.html">Read Full About Page</a>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-7">
-          <div class="glass-card p-4 reveal">
-            <h3 class="h4 fw-semibold">Send a message</h3>
-            <form id="contactForm" class="row g-3 mt-1" novalidate>
-              <div class="col-md-6">
-                <label class="form-label">Full Name</label>
-                <input class="form-control form-control-lg input-glass" required name="name" placeholder="Your name">
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control form-control-lg input-glass" required name="email" placeholder="you@email.com">
-              </div>
-              <div class="col-12">
-                <label class="form-label">Service Needed</label>
-                <select class="form-select form-select-lg input-glass" name="service" required>
-                  <option value="" selected disabled>Select a service…</option>
-                  <option value="Frontend Web Development">🌐 Frontend Web Development</option>
-                  <option value="Electrical Installation / Maintenance">⚡ Electrical Installation / Maintenance</option>
-                  <option value="General Printing">🖨️ General Printing</option>
-                </select>
-              </div>
-              <div class="col-12">
-                <label class="form-label">Message</label>
-                <textarea class="form-control form-control-lg input-glass" rows="5" required name="message"
-                  placeholder="Tell me what you need, your timeline, and budget range (optional)."></textarea>
-              </div>
-              <div class="col-12 d-flex flex-wrap gap-2">
-                <button class="btn btn-neon px-4" type="submit">
-                  <i class="bi bi-send"></i> Submit
-                </button>
-                <button class="btn btn-ghost px-4" type="button" id="copyEmailBtn">
-                  <i class="bi bi-clipboard"></i> Copy Email
-                </button>
-              </div>
-              <div class="col-12">
-                <div id="formToast" class="toast-lite d-none"></div>
-              </div>
-            </form>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
+    <section class="section-pad section-shell">
+      <div class="container">
+        <div class="cta-panel" data-reveal>
+          <div>
+            <span class="eyebrow">Ready To Start</span>
+            <h2 class="section-title">Need a website, electrical support, or print work?</h2>
+            <p class="section-copy mb-0">The contact details and inquiry form now live on a dedicated page so it is easier to send a proper request.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-brand" href="contact.html">Contact Me</a>
+            <a class="btn btn-outline-brand" href="#" data-whatsapp-link>WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <div class="footer-motto">
-            <i class="bi bi-gem"></i>
-            <span>We Build It, Power It, And Bring It to Life With Innovation in Web, Precision in Power, Quality in Printing.</span>
-            <i class="bi bi-gem"></i>
-          </div>
-          <div class="text-dim small">
-            Premium service delivery across Web Developments, Electrical Works, and General Printing Solutions  —  Built For Quality And Trust.
-          </div>
-          <div class="footer-social">
-            <a class="social-btn sm" href="https://www.linkedin.com/in/daniel-jegbefumhen-944aa9156/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a class="social-btn sm" href="https://github.com/Lorddan212" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
-            <a class="social-btn sm" href="https://x.com/lorddan212" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-            <a class="social-btn sm" href="https://www.tiktok.com/@lorddan212?lang=en" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-            <a class="social-btn sm" href="https://www.youtube.com/@Lorddan212" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-            <a class="social-btn sm" href="https://web.facebook.com/Lorddan212" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          </div>
-        </div>
-
-        <div class="footer-links">
-          <div class="fw-bold mb-2">Quick Links</div>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="#tracks">My Tracks</a>
-          <a href="#work">Portfolio</a>
-          <a href="#contact">Contact</a>
-        </div>
-
-        <div class="footer-links">
-          <div class="fw-bold mb-2">Contact</div>
-          <a href="mailto:jegbefumhendaniel@gmail.com"><i class="bi bi-envelope-at me-2"></i> Email</a>
-          <a href="tel:+2348109368514"><i class="bi bi-telephone me-2"></i> Phone</a>
-          <a href="https://wa.me/2348109368514?text=Hi%20Daniel%2C%20I%20saw%20your%20portfolio%20and%20I%20want%20to%20discuss%20a%20project%2Fservice." target="_blank">
-            <i class="bi bi-whatsapp me-2"></i> WhatsApp
-          </a>
-          <a href="https://www.google.com/maps/search/?api=1&query=Plot%20346%20Plase%201%20Lugbe%20Airport%20Road%20FCT%20Abuja%20Nigeria" target="_blank">
-            <i class="bi bi-geo-alt me-2"></i> Plot 346 Plase 1 Lugbe, Abuja
-          </a>
-        </div>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand-mark footer-brand" href="index.html">
+          <img src="assets/img/Link Logo.png" alt="Daniel Jegbe logo">
+          <span>
+            <strong>Daniel Jegbe</strong>
+            <small>Portfolio</small>
+          </span>
+        </a>
+        <p class="footer-copy">Frontend web development, electrical support, and print services delivered with clarity and care.</p>
       </div>
 
-      <div class="footer-bottom">
-        <div>© <span id="year"></span> Daniel Odion Jegbefumhen. All rights reserved.</div>
-        <div class="text-dim">From Pixels to Power to Print — Premium Solutions, End-to-End.</div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
+
+      <div>
+        <h3>Contact</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:jegbefumhendaniel@gmail.com">jegbefumhendaniel@gmail.com</a></li>
+          <li><a href="tel:+2348109368514">+2348109368514</a></li>
+          <li><a href="#" data-whatsapp-link>WhatsApp chat</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year></span> Daniel Odion Jegbefumhen. All rights reserved.</p>
     </div>
   </footer>
 
